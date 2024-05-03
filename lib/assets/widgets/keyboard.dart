@@ -30,8 +30,7 @@ class Keyboard extends StatelessWidget {
                   letter: alphabet[j],
                   setLetter: setLetter,
                   press: chosenLetters.contains(alphabet[j]),
-                  isCorrect: currentWord.contains(
-                      alphabet[j]), // Determina se a letra é correta ou não
+                  isCorrect: currentWord.contains(alphabet[j]),
                 ),
             ],
           ),

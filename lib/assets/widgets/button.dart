@@ -4,7 +4,7 @@ class Button extends StatelessWidget {
   final String letter;
   final Function(String) setLetter;
   final bool press;
-  final bool isCorrect; // Indica se a letra é correta
+  final bool isCorrect;
 
   const Button({
     Key? key,
@@ -16,13 +16,11 @@ class Button extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Color buttonColor = const Color.fromRGBO(255, 187, 112, 1); // Cor padrão
+    Color buttonColor = const Color.fromRGBO(255, 187, 112, 1);
     if (press && !isCorrect) {
-      buttonColor = Colors
-          .red; // Se a letra for errada e pressionada, botão fica vermelho
+      buttonColor = Colors.red;
     } else if (press && isCorrect) {
-      buttonColor = Colors
-          .green; // Se a letra for correta e pressionada, botão fica verde
+      buttonColor = Colors.green;
     }
 
     return Expanded(
@@ -34,14 +32,12 @@ class Button extends StatelessWidget {
             : null,
         child: Padding(
           padding: const EdgeInsetsDirectional.symmetric(
-              horizontal: 3.0,
-              vertical:
-                  6.0), // Adicionando um padding de 4.0 em todas as direções
+              horizontal: 3.0, vertical: 6.0),
           child: Container(
             height: 40,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
-              color: buttonColor, // Aplicando a cor determinada
+              color: buttonColor,
             ),
             child: Center(
               child: Text(
